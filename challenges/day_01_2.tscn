@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cplhuv5kjf0kv"]
+
+[ext_resource type="Script" path="res://challenges/day_01_2.gd" id="1_djygs"]
+
+[node name="Day01-2" type="CanvasLayer" node_paths=PackedStringArray("input_edit", "results_button", "results_label")]
+script = ExtResource("1_djygs")
+input_edit = NodePath("MarginContainer/VBoxContainer/InputEdit")
+results_button = NodePath("MarginContainer/VBoxContainer/ResultsButton")
+results_label = NodePath("MarginContainer/VBoxContainer/ResultsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="InputEdit" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "3   4
+4   3
+2   5
+1   3
+3   9
+3   3
+"
+
+[node name="ResultsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press to calculate the total distance"
+
+[node name="ResultsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
