@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi2t60hyd7ufj"]
+
+[ext_resource type="Script" path="res://challenges/day_03_2.gd" id="1_8hra1"]
+
+[node name="Day03-2" type="CanvasLayer" node_paths=PackedStringArray("input_edit", "results_button", "results_label")]
+script = ExtResource("1_8hra1")
+input_edit = NodePath("MarginContainer/VBoxContainer/InputEdit")
+results_button = NodePath("MarginContainer/VBoxContainer/ResultsButton")
+results_label = NodePath("MarginContainer/VBoxContainer/ResultsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="InputEdit" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
+"
+
+[node name="ResultsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press to calculate the total"
+
+[node name="ResultsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
