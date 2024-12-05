@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyt1wy0wrv3lg"]
+
+[ext_resource type="Script" path="res://challenges/day_05_1.gd" id="1_vhqvl"]
+
+[sub_resource type="SystemFont" id="SystemFont_phriy"]
+font_names = PackedStringArray("Monospace")
+
+[node name="Day05-1" type="CanvasLayer" node_paths=PackedStringArray("input_edit", "results_button", "results_label")]
+script = ExtResource("1_vhqvl")
+input_edit = NodePath("MarginContainer/VBoxContainer/InputEdit")
+results_button = NodePath("MarginContainer/VBoxContainer/ResultsButton")
+results_label = NodePath("MarginContainer/VBoxContainer/ResultsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="InputEdit" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("SystemFont_phriy")
+text = "47|53
+97|13
+97|61
+97|47
+75|29
+61|13
+75|53
+29|13
+97|29
+53|29
+61|53
+97|53
+61|29
+47|13
+75|47
+97|75
+47|61
+75|61
+47|29
+75|13
+53|13
+
+75,47,61,53,29
+97,61,53,29,13
+75,29,13
+75,97,47,61,53
+61,13,29
+97,13,75,29,47"
+
+[node name="ResultsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press to find the middle number sum of corredly-ordered pages"
+
+[node name="ResultsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
