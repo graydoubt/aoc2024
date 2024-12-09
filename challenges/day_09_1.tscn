@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2x3p0ldlml8a"]
+
+[ext_resource type="Script" path="res://challenges/day_09_1.gd" id="1_lya68"]
+
+[sub_resource type="SystemFont" id="SystemFont_phriy"]
+font_names = PackedStringArray("Monospace")
+
+[node name="Day09-1" type="CanvasLayer" node_paths=PackedStringArray("input_edit", "results_button", "results_label")]
+script = ExtResource("1_lya68")
+input_edit = NodePath("MarginContainer/VBoxContainer/InputEdit")
+results_button = NodePath("MarginContainer/VBoxContainer/ResultsButton")
+results_label = NodePath("MarginContainer/VBoxContainer/ResultsLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="InputEdit" type="TextEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("SystemFont_phriy")
+text = "2333133121414131402"
+
+[node name="ResultsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press to defrag and calculate the checksum."
+
+[node name="ResultsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
